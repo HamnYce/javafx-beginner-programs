@@ -3,6 +3,7 @@ package com.example.assignment4;
 import javafx.geometry.Insets;
 import javafx.geometry.Point2D;
 import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
@@ -11,9 +12,27 @@ import javafx.scene.shape.Circle;
 import javafx.scene.shape.Line;
 import javafx.scene.text.Text;
 
+import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.Random;
+import java.util.Scanner;
 
 public class Widgets {
+    public static Parent getProject() {
+        System.out.println("""
+                input 1 for Tic Tac Toe
+                input 2 for Matrix Builder
+                input 3 for Geometry Builder
+                input anything else for errors :]""");
+        int choice = new Scanner(System.in).nextInt();
+        switch (choice) {
+            case 1 -> {return new TicTacToeBuilder().build();}
+            case 2 -> {return new MatrixBuilder().build();}
+            case 3 -> {return new GeometryBuilder().build();}
+        }
+        return null;
+    }
+
     public static Node createLine(Point2D point1, Point2D point2) {
         Line line = new Line();
         line.setStartX(point1.getX());
