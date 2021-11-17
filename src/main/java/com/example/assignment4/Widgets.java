@@ -1,23 +1,38 @@
 package com.example.assignment4;
 
+import javafx.geometry.HPos;
 import javafx.geometry.Insets;
 import javafx.geometry.Point2D;
+import javafx.geometry.Pos;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.HBox;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Line;
 import javafx.scene.text.Text;
-
-import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.Random;
 import java.util.Scanner;
 
 public class Widgets {
+
+    public static Node createButton(String s) {
+        return new Button(s);
+    }
+
+    public static Node createButtonBottomLeft(String s) {
+        // TODO: make button on bottom left, check javafx-quickprogs for help
+        //  with using position
+        HBox hBox = new HBox();
+        Button button = new Button(s);
+        hBox.getChildren().add(button);
+        hBox.setAlignment(Pos.BOTTOM_LEFT);
+        hBox.setMaxHeight(button.getMaxHeight());
+        return hBox;
+    }
     public static Parent getProject() {
         System.out.println("""
                 input 1 for Tic Tac Toe
