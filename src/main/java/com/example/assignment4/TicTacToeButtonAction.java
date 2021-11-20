@@ -6,11 +6,11 @@ import javafx.scene.image.ImageView;
 
 import java.util.ArrayList;
 
-public class ButtonAction {
+public class TicTacToeButtonAction {
     int counter = 0;
     ArrayList<ImageView> imageViews;
 
-    public ButtonAction() {
+    public TicTacToeButtonAction() {
         imageViews = new ArrayList<>();
         imageViews.add(new ImageView(new Image("assets/cross.png")));
         imageViews.add(new ImageView(new Image("assets/circle.jpeg")));

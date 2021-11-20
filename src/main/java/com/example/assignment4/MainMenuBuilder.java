@@ -10,7 +10,6 @@ import javafx.util.Builder;
 public class MainMenuBuilder implements Builder<Parent> {
     @Override
     public Parent build() {
-        // TODO: Create Main Menu text at the center of the screen
         StackPane results = new StackPane();
         results.setPadding(new Insets(100, 0, 100, 0));
         Text text = new Text("Title Screen");

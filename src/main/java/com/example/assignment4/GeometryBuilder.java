@@ -9,7 +9,7 @@ import javafx.util.Builder;
 public class GeometryBuilder implements Builder<Parent> {
     @Override
     public Parent build() {
-        Group result = new Group();
+        Group results = new Group();
 
         // create 2 random points
         Point2D point1 = new Point2D(
@@ -20,23 +20,23 @@ public class GeometryBuilder implements Builder<Parent> {
                 Widgets.createRandomCoordinate());
 
         // Create 2 filled circles
-        result.getChildren().addAll(
+        results.getChildren().addAll(
                 Widgets.createCircle(point1, 15),
                 Widgets.createCircle(point2, 15));
 
         // create line joining 2 circles
-        result.getChildren().add(Widgets.createLine(point1, point2));
+        results.getChildren().add(Widgets.createLine(point1, point2));
 
 
         Point2D midpoint = point1.midpoint(point2);
         double distance = point1.distance(point2);
         distance = Math.round(distance * 100) / 100.0;
 
-        result.getChildren().add(new Text(
+        results.getChildren().add(new Text(
                 midpoint.getX(),
                 midpoint.getY(),
                 Double.toString(distance)));
 
-        return result;
+        return results;
     }
 }

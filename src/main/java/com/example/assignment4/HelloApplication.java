@@ -22,6 +22,7 @@ public class HelloApplication extends Application {
 
         scene.getStylesheets().add("styles/default.css");
 
+
         stage.setResizable(true);
         stage.setTitle("Hello!");
         stage.setScene(scene);

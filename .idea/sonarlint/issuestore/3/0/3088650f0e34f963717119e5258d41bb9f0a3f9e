@@ -1,8 +1,0 @@
-
-X	java:S125"<This block of commented-out lines of code should be removed.(–ÁÄÿ8ë¡ŸÚÑ/
-R
-java:S1128"0Remove this unused import 'javafx.geometry.Pos'.(ÌÆ÷Ùøÿÿÿÿ8¬Ö£ÚÑ/
-K
-java:S1128".Remove this unused import 'javafx.scene.Node'.(ÑÖ¬ï8¬Ö£ÚÑ/
-Z
-java:S1128"8Remove this unused import 'javafx.scene.control.Button'.(Ë Í‹øÿÿÿÿ8­Ö£ÚÑ/

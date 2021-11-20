@@ -1,6 +1,5 @@
 package com.example.assignment4;
 
-import javafx.geometry.HPos;
 import javafx.geometry.Insets;
 import javafx.geometry.Point2D;
 import javafx.geometry.Pos;
@@ -93,13 +92,13 @@ public class Widgets {
     private static Node createTicTacToeCell() {
         Button button = new Button();
 
-        final ButtonAction buttonAction = new ButtonAction();
+        final TicTacToeButtonAction ticTacToeButtonAction = new TicTacToeButtonAction();
         button.setMinHeight(50);
         button.setMinWidth(50);
         button.setPadding(new Insets(0));
 
         button.setOnAction(e -> {
-            button.setGraphic(buttonAction.changeImage(button.getGraphic()));
+            button.setGraphic(ticTacToeButtonAction.changeImage(button.getGraphic()));
         });
 
         return button;
