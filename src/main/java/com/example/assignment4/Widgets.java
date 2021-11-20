@@ -23,8 +23,6 @@ public class Widgets {
     }
 
     public static Node createButtonBottomLeft(String s) {
-        // TODO: make button on bottom left, check javafx-quickprogs for help
-        //  with using position
         HBox hBox = new HBox();
         Button button = new Button(s);
         hBox.getChildren().add(button);
